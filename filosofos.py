@@ -28,10 +28,6 @@ class Filosofos:
             self.pensar()
     def parar(self):
         return self.comio
-def run(f):
-    tenedor_x = Tenedor()
-    tenedor_y = Tenedor()
-    filosofo_x = Filosofos(f,tenedor_x,tenedor_y)
     
 def principal():
     tenedor_1 = Tenedor()
@@ -49,7 +45,6 @@ def principal():
     conjFilosofos = [filosofo_1,filosofo_2,filosofo_3,filosofo_4,filosofo_5]
 
     contador=0
-    print(filosofo_1.parar(), filosofo_2.parar())
     while (filosofo_1.parar() and filosofo_2.parar() and filosofo_3.parar() and filosofo_4.parar() and filosofo_5.parar() ) == False:  
         contador %= 5
         f = conjFilosofos[contador]
